@@ -5,21 +5,21 @@
 class Yertle < Formula
   desc "CLI for exploring the Yertle platform"
   homepage "https://github.com/model-context/yertle-cli"
-  version "0.1.0"
+  version "0.1.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/model-context/yertle-cli/releases/download/v0.1.0/yertle_darwin_amd64.tar.gz"
-      sha256 "6e028422b09390f8b326491187810ad0114149534695f4b780baa5170f6dbd06"
+      url "https://github.com/model-context/yertle-cli/releases/download/v0.1.1/yertle_darwin_amd64.tar.gz"
+      sha256 "6b049d63466cc744833847ca48857ffe70b8f92f63814667cbc32b509487db27"
 
       define_method(:install) do
         bin.install "yertle"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/model-context/yertle-cli/releases/download/v0.1.0/yertle_darwin_arm64.tar.gz"
-      sha256 "fdd3430c3a5c1b8c562dd4feea9606452c5146e08b404a33f7f4fe9652b0e2f8"
+      url "https://github.com/model-context/yertle-cli/releases/download/v0.1.1/yertle_darwin_arm64.tar.gz"
+      sha256 "1d320763cb506ce440aa12f62ce32e6099cb03101573a283161bea9811be2f43"
 
       define_method(:install) do
         bin.install "yertle"
@@ -29,15 +29,15 @@ class Yertle < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/model-context/yertle-cli/releases/download/v0.1.0/yertle_linux_amd64.tar.gz"
-      sha256 "2e15c24b3dcf6634750ea1ed0a4db282377a70b6e90ac0e0817c82dcbb011666"
+      url "https://github.com/model-context/yertle-cli/releases/download/v0.1.1/yertle_linux_amd64.tar.gz"
+      sha256 "6edce409f269122f64d1872c9f8e84dc66245603c3b4cf386f6b9ef052e3bd67"
       define_method(:install) do
         bin.install "yertle"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/model-context/yertle-cli/releases/download/v0.1.0/yertle_linux_arm64.tar.gz"
-      sha256 "f14ee304629344b7fc0b3ec68af54427cd522ab6c2f8e243665ddc6a072701d7"
+      url "https://github.com/model-context/yertle-cli/releases/download/v0.1.1/yertle_linux_arm64.tar.gz"
+      sha256 "6261f2dcf1cbf21acf60c7ee1b745cc1c96f3682dfb72e35fa121b7874b3e2f4"
       define_method(:install) do
         bin.install "yertle"
       end
