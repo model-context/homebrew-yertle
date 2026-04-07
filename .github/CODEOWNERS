@@ -1,0 +1,14 @@
+# Code owners for homebrew-yertle
+#
+# This is the Homebrew tap for the yertle-cli. The formula in this repo is
+# auto-generated and pushed by GoReleaser whenever a new yertle-cli release
+# is published. Direct pushes to main MUST remain allowed for the GoReleaser
+# automation to work.
+#
+# These owners will be auto-requested for review on any external PRs
+# (typo fixes, formula tweaks from community contributors).
+#
+# Docs: https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-security/customizing-your-repository/about-code-owners
+
+# Default owner for everything
+* @albertcmiller1
