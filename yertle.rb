@@ -20,8 +20,8 @@
 class Yertle < Formula
   desc "Yertle CLI and SRE agent (Python)"
   homepage "https://yertle.com"
-  url "https://files.pythonhosted.org/packages/91/24/d516d1391c4ca45ec60997257f327cc3a1b0e0f3dc0871fd45ac5861b273/yertle-0.1.0.tar.gz"
-  sha256 "37fdc49503e43a6a36c75fae057ccdcfb91a3547f8deb4f26b6ec20d8fd3f5f7"
+  url "https://files.pythonhosted.org/packages/d9/f7/62f496bdcd79dfc39aa264af567f7aef4d56a7373a6bdb4ad8fe03dc45ae/yertle-0.2.0.tar.gz"
+  sha256 "8eb463022055db2a6ef7fc2f35decfac8616dcf59539b0214d3c7a8a71e908da"
   license "MIT"
 
   depends_on "python@3.12"
