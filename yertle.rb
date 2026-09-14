@@ -20,8 +20,8 @@
 class Yertle < Formula
   desc "Yertle CLI and SRE agent (Python)"
   homepage "https://yertle.com"
-  url "https://files.pythonhosted.org/packages/d9/f7/62f496bdcd79dfc39aa264af567f7aef4d56a7373a6bdb4ad8fe03dc45ae/yertle-0.2.0.tar.gz"
-  sha256 "8eb463022055db2a6ef7fc2f35decfac8616dcf59539b0214d3c7a8a71e908da"
+  url "https://files.pythonhosted.org/packages/fc/eb/aaf52b2cf7b0ac47b18bec3caa817d35e1fdc5ddd710c84385829ee52185/yertle-0.3.0.tar.gz"
+  sha256 "33417287eea58afe075da1dbaa0b5d98ad008f11137b74a0ed290fe59962a3ca"
   license "MIT"
 
   depends_on "python@3.12"
@@ -42,6 +42,11 @@ class Yertle < Formula
   end
 
   test do
+    # Assert the VERSION, not just that the binary runs. `yertle --help`
+    # contains the string "yertle" no matter which release is installed, so
+    # the old assertion would have passed on a bump that silently did not
+    # take. `yertle version` reads from installed distribution metadata.
+    assert_match version.to_s, shell_output("#{bin}/yertle version")
     assert_match "yertle", shell_output("#{bin}/yertle --help")
     assert_match "yertle-sre", shell_output("#{bin}/yertle-sre --help")
     refute_predicate bin/"yertle-mcp", :exist?,
